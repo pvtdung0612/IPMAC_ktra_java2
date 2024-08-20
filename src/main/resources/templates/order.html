@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order List</title>
+    <link rel="stylesheet" th:href="tailwindcss_out.css">
+</head>
+<body>
+
+<div class="p-5 gap-5">
+    <!--HEADER-->
+    <div class="text-center">
+        <h1 class="font-bold text-[20px]">SHOPPING COMPUTER</h1>
+        <a class="text-red-500 text-[16px]" th:href="@{/home}">
+            Xem danh sách sản phầm (Chọn vào đây nếu lỗi phông)
+        </a>
+    </div>
+
+    <!--CONTRAINER-->
+    <div class="mt-10">Tổng số Đơn hàng trong giỏ hàng: <span th:text="${orders.size()}"></span></div>
+    <div class="flex flex-wrap gap-2 mt-5">
+        <div th:each="order: ${orders}" th:object="${order}">
+            <div class="w-[232px] gap-2 rounded-md border-2 border-solid border-gray-400 p-2">
+                <div>Mua bởi: <span th:text="*{user.getFullname()}"></span></div>
+                <div>Tổng số lượng: <span th:text="*{total_qty}"></span></div>
+                <div>Tổng giá: <span th:text="*{#numbers.formatDecimal(total_amount, 0, 'COMMA', 0, 'POINT')}"></span></div>
+                <div>Trạng thái:
+                    <span th:if="*{status==0}">Mới đặt</span>
+                    <span th:if="*{status==1}">Đã xử lý</span>
+                    <span th:if="*{status==null}">Rỗng</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

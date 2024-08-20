@@ -1,6 +1,6 @@
 package com.samsung.phanvantiendung.configuration;
 
-import com.samsung.phanvantiendung.repositories.models.User;
+import com.samsung.phanvantiendung.repositories.models.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;

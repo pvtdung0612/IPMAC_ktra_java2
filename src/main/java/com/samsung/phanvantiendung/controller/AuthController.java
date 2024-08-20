@@ -1,6 +1,7 @@
 package com.samsung.phanvantiendung.controller;
 
-import com.samsung.phanvantiendung.repositories.models.User;
+import com.samsung.phanvantiendung.repositories.models.FilterModel;
+import com.samsung.phanvantiendung.repositories.models.entities.User;
 import com.samsung.phanvantiendung.services.UserService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,10 @@ public class AuthController {
     @Autowired
     UserService userService;
 
+    @GetMapping("/")
+    public String LoginFirst() {
+        return "redirect:/auth/login";
+    }
     @GetMapping("/auth/login")
     public String Login() {
         return "Auth/login";

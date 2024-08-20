@@ -1,7 +1,7 @@
 package com.samsung.phanvantiendung.services;
 
 import com.samsung.phanvantiendung.repositories.CatalogRepository;
-import com.samsung.phanvantiendung.repositories.models.Catalog;
+import com.samsung.phanvantiendung.repositories.models.entities.Catalog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

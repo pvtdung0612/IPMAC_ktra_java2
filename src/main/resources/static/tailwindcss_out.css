@@ -588,6 +588,26 @@ video {
   }
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mt-\[20px\] {
+  margin-top: 20px;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -621,6 +641,14 @@ video {
   flex: 1 1 0%;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -639,6 +667,16 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .rounded-md {
@@ -671,65 +709,31 @@ video {
   padding: 1.25rem;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-\[60px\] {
+  font-size: 60px;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
 }
 
 .font-bold {
   font-weight: 700;
 }
 
-body{
-  font-family: Roboto,-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
-  font-size: 14px;
-}
-
-.container
-{
-  width: 300px;
-  margin: 0 auto;
-  padding: 50px;
-}
-
-.form-row
-{
-  padding: 10px;
-}
-
-.form-row .label
-{
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.field input
-{
-  width: 100%;
-  padding: 5px;
-}
-
-.btn-box
-{
-  text-align: center;
-  width: 70%;
-  padding: 8px;
-  border-radius: 20px;
-  background-color: #2e2e2e;
-  color: #FFF;
-}
-
-.btn-box button
-{
-  width: 70%;
-  padding: 8px;
-  border-radius: 20px;
-  background-color: #2e2e2e;
-  color: #FFF;
-}
-
-.error
-{
-  color: red;
-  font-size: 90%;
-  margin-top: 3px;
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }

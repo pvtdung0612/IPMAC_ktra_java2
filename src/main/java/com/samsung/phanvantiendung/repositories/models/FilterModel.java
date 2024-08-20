@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SearchModel {
+public class FilterModel {
+    public String catalogType;
     public String searchProduct;
 }

@@ -1,4 +1,4 @@
-package com.samsung.phanvantiendung.repositories.models;
+package com.samsung.phanvantiendung.repositories.models.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

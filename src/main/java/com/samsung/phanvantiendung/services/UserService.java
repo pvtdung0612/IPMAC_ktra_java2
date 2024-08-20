@@ -2,12 +2,15 @@ package com.samsung.phanvantiendung.services;
 
 import com.samsung.phanvantiendung.configuration.CustomUserDetails;
 import com.samsung.phanvantiendung.repositories.UserRepository;
-import com.samsung.phanvantiendung.repositories.models.User;
+import com.samsung.phanvantiendung.repositories.models.entities.Order;
+import com.samsung.phanvantiendung.repositories.models.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService implements UserDetailsService {
@@ -32,5 +35,9 @@ public class UserService implements UserDetailsService {
     public User getUserByUserName(String username)
     {
         return userRepository.findByUsername(username);
+    }
+
+    public User getUserById(Long id) {
+        return userRepository.findById(id).get();
     }
 }

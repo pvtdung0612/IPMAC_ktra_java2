@@ -1,11 +1,10 @@
-package com.samsung.phanvantiendung.repositories.models;
+package com.samsung.phanvantiendung.repositories.models.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Table(name = "order_details")

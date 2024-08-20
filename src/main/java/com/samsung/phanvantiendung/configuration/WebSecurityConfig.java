@@ -32,7 +32,7 @@ public class WebSecurityConfig {
                 .formLogin((form)->form
                         .loginPage("/auth/login")
                         .permitAll()
-                        .defaultSuccessUrl("/"))
+                        .defaultSuccessUrl("/home"))
         ;
         return http.build();
     }
