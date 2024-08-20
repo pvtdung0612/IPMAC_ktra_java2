@@ -1,0 +1,14 @@
+package com.samsung.phanvantiendung.repositories.models;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class SearchModel {
+    public String searchProduct;
+}

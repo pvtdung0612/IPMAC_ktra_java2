@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="tailwindcss_out.css">
+</head>
+<body>
+<div class="p-5">
+    <!--HEADER-->
+    <div class="text-center">
+        <h1>SHOP FAKE</h1>
+    </div>
+
+    <!--NAV-BAR-->
+    <div class="flex justify-between gap-2">
+        <div class="flex gap-2">
+            <div>All</div>
+            <div class="h-full text-center" th:each="catalog: ${catalogs}" th:object="${catalog}">
+                <div th:text="*{name}"></div>
+            </div>
+        </div>
+        <form class="flex-1 flex justify-between gap-2" th:action="@{/search-product}" method="post" th:object="searchProduct">
+            <input class="w-full border-solid border-gray-400 border-2 rounded-md" type="text" th:field="*{searchProduct}">
+            <button class="w-fit p-2 rounded-md bg-gray-400" type="submit">search</button>
+        </form>
+    </div>
+
+    <!--CONTRAINER-->
+   <div class="flex flex-wrap gap-2">
+       <div th:each="product: ${products}" th:object="${product}">
+           <div class="w-[232px]">
+               <img class="w-[232px] h-[232px] rounded-md border-solid border-1 border-gray-400" th:src="*{picture}" alt="">
+               <div th:text="*{name}"></div>
+               <div class="font-bold"><span th:text="*{price}"></span>đ</div>
+               <form class="flex justify-center items-center" th:action="@{/buy-now}" method="post">
+                   <input type="hidden" th:value="${product.id}" name="productId" id="productId">
+                   <button class="w-fit p-2 rounded-md bg-gray-400" type="submit">Mua ngay</button>
+               </form>
+           </div>
+       </div>
+   </div>
+</div>
+</body>
+</html>
